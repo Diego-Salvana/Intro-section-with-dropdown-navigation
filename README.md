@@ -2,7 +2,6 @@
 
 This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
 
-
 ### The challenge
 
 Users should be able to:
@@ -13,7 +12,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Intro section with dropdown navigation](https://your-live-site-url.com)
+- Live Site URL: [Intro section with dropdown navigation](https://diego-salvana.github.io/Intro-section-with-dropdown-navigation/)
 
 ### Built with
 
