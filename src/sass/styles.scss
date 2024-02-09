@@ -1,0 +1,24 @@
+@use 'variables';
+@use 'nav';
+@use 'main';
+@use 'modal-menu';
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Epilogue;
+}
+
+body {
+   background-color: variables.$AlmostWhite;
+   min-height: 100vh;
+   overflow-x: hidden;
+   position: relative;
+}
+
+ul {
+   list-style: none;
+}

@@ -1,0 +1,134 @@
+@use 'variables';
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 24px 15px;
+   max-width: 800px;
+   margin: auto;
+
+   .navbar {
+      display: flex;
+
+      &__menu {
+         list-style: none;
+         display: none;
+      }
+
+      &__btn-desktop {
+         display: none;
+      }
+
+      &__btn-mobile {
+         border: none;
+         background-color: inherit;
+         padding-top: 1px;
+         transition: all 0.1s linear;
+
+         &:active {
+            transform: scale(0.9);
+         }
+      }
+   }
+
+   @media (min-width: variables.$isDesktop) {
+      max-width: 1980px;
+      padding: 21px 40px;
+      align-items: center;
+
+      .navbar {
+         &__logo {
+            padding-top: 6px;
+            padding-right: 42px;
+         }
+
+         &__btn-mobile {
+            display: none;
+         }
+
+         &__menu {
+            @include variables.MenuList($textSize: 14px, $summaryTextPaddingRight: 8px);
+            display: flex;
+            align-items: center;
+
+            & > li {
+               padding: 0 20px;
+            }
+
+            details {
+               position: relative;
+
+               .details-options {
+                  position: absolute;
+                  right: 0;
+                  z-index: 1000;
+                  width: max-content;
+                  background-color: #fff;
+                  margin-top: 20px;
+                  padding: 16px 26px 14px;
+                  border-radius: 8px;
+                  box-shadow: 2px 2px 15px #ccc;
+
+                  &__option {
+                     padding: 7px 0;
+                     display: flex;
+                     align-items: center;
+
+                     .icon-option {
+                        width: 16px;
+                     }
+
+                     .text {
+                        padding-left: 10px;
+                     }
+
+                     &:hover {
+                        cursor: pointer;
+                     }
+
+                     &:active {
+                        color: variables.$AlmostBlack;
+                     }
+                  }
+               }
+            }
+
+            & > li:nth-child(2) .details-options {
+               left: 0;
+
+               &__option {
+                  padding-top: 9px;
+                  padding-bottom: 9px;
+               }
+            }
+
+            .menu-summary:hover {
+               cursor: pointer;
+            }
+
+            .menu-summary:active {
+               color: variables.$AlmostBlack;
+            }
+         }
+
+         &__btn-desktop {
+            display: flex;
+
+            .auth-btn {
+               @include variables.Auth-btn-mixin;
+               padding-left: 22px;
+               padding-right: 22px;
+
+               &.login {
+                  margin-right: 20px;
+               }
+
+               &:hover {
+                  cursor: pointer;
+               }
+            }
+         }
+      }
+   }
+}

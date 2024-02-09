@@ -1,0 +1,76 @@
+// Font Family
+@font-face {
+   font-family: Epilogue;
+   src: url('../fonts/Epilogue-VariableFont_wght.ttf');
+}
+
+// Weights
+$EpilogueMedium: 500;
+$EpilogueBold: 700;
+
+// Layout
+$layout: (
+   mobile: 375px,
+   desktop: 1440px,
+);
+
+$isDesktop: map-get($layout, desktop);
+
+// Colors
+$AlmostWhite: hsl(0, 0%, 98%);
+$MediumGray: hsl(0, 0%, 41%);
+$AlmostBlack: hsl(0, 0%, 8%);
+
+// Mixins
+@mixin Auth-btn-mixin {
+   background-color: inherit;
+   font-weight: $EpilogueMedium;
+   font-size: 14px;
+   color: $MediumGray;
+   padding: 12px;
+   border: none;
+   transition: all 0.1s linear;
+
+   &.register {
+      border: 2px solid $MediumGray;
+      border-radius: 14px;
+   }
+
+   &:active {
+      color: $AlmostBlack;
+      border-color: $AlmostBlack;
+   }
+}
+
+@mixin MenuList($textSize: 16px, $summaryTextPaddingRight: 14px) {
+   list-style: none;
+
+   & > li {
+      font-weight: $EpilogueMedium;
+      font-size: $textSize;
+      color: $MediumGray;
+   }
+
+   summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      span {
+         padding-right: $summaryTextPaddingRight;
+      }
+
+      .arrow {
+         transition: all 0.1s linear;
+      }
+   }
+
+   details[open] {
+      .arrow {
+         transform: rotate(-180deg);
+      }
+   }
+}
+
+// Font-size reference: 18px (paragraph)
+// Weights: 500, 700

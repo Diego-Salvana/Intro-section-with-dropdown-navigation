@@ -1,0 +1,18 @@
+{
+  "name": "intro-section-with-dropdown-navigation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run sass:watch\" \"vite\"",
+    "build": "sass src/sass:src/assets/css && tsc && vite build",
+    "preview": "vite preview",
+    "sass:watch": "sass --watch src/sass:src/assets/css"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "sass": "^1.70.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}

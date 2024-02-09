@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+    <title>FM | Intro section with dropdown navigation</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navbar">
+        <img class="navbar__logo" src="./src/assets/images/logo.svg" alt="Logo" />
+
+        <ul class="navbar__menu">
+          <li>
+            <details>
+              <summary class="menu-summary">
+                <span>Features</span>
+                <img class="arrow" src="./src/assets/images/icon-arrow-down.svg" alt="Arrow" />
+              </summary>
+
+              <ul class="details-options">
+                <li class="details-options__option">
+                  <div class="icon-option">
+                    <img src="./src/assets/images/icon-todo.svg" alt="Option Icon" />
+                  </div>
+                  <span class="text">Todo List</span>
+                </li>
+                <li class="details-options__option">
+                  <div class="icon-option">
+                    <img src="./src/assets/images/icon-calendar.svg" alt="Option Icon" />
+                  </div>
+                  <span class="text">Calendar</span>
+                </li>
+                <li class="details-options__option">
+                  <div class="icon-option">
+                    <img src="./src/assets/images/icon-reminders.svg" alt="Option Icon" />
+                  </div>
+                  <span class="text">Reminders</span>
+                </li>
+                <li class="details-options__option">
+                  <div class="icon-option">
+                    <img src="./src/assets/images/icon-planning.svg" alt="Option Icon" />
+                  </div>
+                  <span class="text">Planning</span>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="menu-summary">
+                <span>Company</span>
+                <img class="arrow" src="./src/assets/images/icon-arrow-down.svg" alt="Arrow" />
+              </summary>
+
+              <ul class="details-options">
+                <li class="details-options__option">History</li>
+                <li class="details-options__option">Our Team</li>
+                <li class="details-options__option">Blog</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <span class="menu-summary">Careers</span>
+          </li>
+          <li>
+            <span class="menu-summary">About</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile -->
+      <button class="navbar__btn-mobile">
+        <img src="./src/assets/images/icon-menu.svg" alt="Menu" />
+      </button>
+
+      <!-- Desktop -->
+      <div class="navbar__btn-desktop">
+        <button class="auth-btn login">Login</button>
+        <button class="auth-btn register">Register</button>
+      </div>
+    </nav>
+
+    <!-- Modal navbar Mobile -->
+    <aside class="modal-menu">
+      <div class="modal-menu__navbar">
+        <button class="btn-cross">
+          <img src="./src/assets/images/icon-close-menu.svg" alt="Cross" />
+        </button>
+
+        <ul class="menu">
+          <li>
+            <details>
+              <summary>
+                <span>Features</span>
+                <img class="arrow" src="./src/assets/images/icon-arrow-down.svg" alt="Arrow" />
+              </summary>
+
+              <ul class="details-options">
+                <li class="details-options__option">
+                  <img src="./src/assets/images/icon-todo.svg" alt="Option Icon" />
+                  <span class="text">Todo List</span>
+                </li>
+                <li class="details-options__option">
+                  <img src="./src/assets/images/icon-calendar.svg" alt="Option Icon" />
+                  <span class="text">Calendar</span>
+                </li>
+                <li class="details-options__option">
+                  <img src="./src/assets/images/icon-reminders.svg" alt="Option Icon" />
+                  <span class="text">Reminders</span>
+                </li>
+                <li class="details-options__option">
+                  <img src="./src/assets/images/icon-planning.svg" alt="Option Icon" />
+                  <span class="text">Planning</span>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span>Company</span>
+                <img class="arrow" src="./src/assets/images/icon-arrow-down.svg" alt="Arrow" />
+              </summary>
+
+              <ul class="details-options">
+                <li class="details-options__option">History</li>
+                <li class="details-options__option">Our Team</li>
+                <li class="details-options__option">Blog</li>
+              </ul>
+            </details>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+
+        <button class="auth-btn login">Login</button>
+        <button class="auth-btn register">Register</button>
+      </div>
+    </aside>
+
+    <main>
+      <section class="images-hero">
+        <img
+          class="images-hero__desktop"
+          src="./src/assets/images/image-hero-desktop.png"
+          alt="Img Desktop"
+        />
+        <img class="images-hero__mobile" src="./src/assets/images/image-hero-mobile.png" alt="Img Mobile" />
+      </section>
+
+      <section class="info">
+        <h1>
+          <span>Make</span>
+          <span>remote work</span>
+        </h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+          productivity soar.
+        </p>
+        <button>Learn more</button>
+
+        <ul class="clients">
+          <li><img class="databiz" src="./src/assets/images/client-databiz.svg" alt="Client" /></li>
+          <li><img src="./src/assets/images/client-audiophile.svg" alt="Client" /></li>
+          <li><img src="./src/assets/images/client-meet.svg" alt="Client" /></li>
+          <li><img src="./src/assets/images/client-maker.svg" alt="Client" /></li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

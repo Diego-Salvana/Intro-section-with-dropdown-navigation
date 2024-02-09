@@ -1,0 +1,79 @@
+@use 'variables';
+
+.modal-menu {
+   background-color: red;
+   position: fixed;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   z-index: 1000;
+   background: hsl(0, 0%, 13%, 0.8);
+   transform: translateX(100%);
+   transition: all .2s ease-out;
+
+   &__navbar {
+      width: 65%;
+      max-width: 300px;
+      height: 100%;
+      background-color: variables.$AlmostWhite;
+      position: absolute;
+      right: 0px;
+      padding: 0 24px 50px;
+      overflow-x: auto;
+
+      .btn-cross {
+         position: fixed;
+         border: none;
+         background-color: inherit;
+         top: 20px;
+         right: 20px;
+         transition: all 0.1s linear;
+
+         &:active {
+            transform: scale(0.9);
+         }
+      }
+
+      .menu {
+         @include variables.MenuList;
+         padding-top: 100px;
+
+         & > li {
+            margin-bottom: 25px;
+         }
+
+         .details-options {
+            padding: 5px 0 10px 22px;
+
+            &__option {
+               margin-top: 25px;
+               display: flex;
+               align-items: center;
+
+               .text {
+                  padding-top: 2px;
+                  padding-left: 15px;
+               }
+
+               img {
+                  width: 18px;
+               }
+
+               &:active {
+                  color: variables.$AlmostBlack;
+               }
+            }
+         }
+      }
+
+      .auth-btn {
+         @include variables.Auth-btn-mixin;
+         width: 100%;
+         margin-bottom: 6px;
+      }
+
+      @media (min-width: 1200px) {
+         max-width: 350px;
+      }
+   }
+}
